@@ -1,1 +1,9 @@
-from calculator_class import Calculatorclass CalculatorMenu:    def __init__(self):        self.calculator = Calculator()        self.calculator_menu = {            "1":("\033[32mADDITION\033[0m",self.calculator.Addition),            "2":("\033[33mSUBTRACTION\033[0m",self.calculator.Subtraction),            "3":("\033[34mMULTIPLICATION\033[0m",self.calculator.Multiplication),            "4":("\033[35mDIVISION\033[0m",self.calculator.Division)}
+from calculator_class import Calculator
+class CalculatorMenu:
+    def __init__(self):
+        self.calculator = Calculator()
+        self.calculator_menu = {
+            "1":("\033[32mADDITION\033[0m",self.calculator.Addition),
+            "2":("\033[33mSUBTRACTION\033[0m",self.calculator.Subtraction),
+            "3":("\033[34mMULTIPLICATION\033[0m",self.calculator.Multiplication),
+            "4":("\033[35mDIVISION\033[0m",self.calculator.Division)}
