@@ -8,9 +8,7 @@ class CalculatorApp(CalculatorMenu):
             try:
                 for key, value in self.calculator_menu.items():
                     print(f"{key}:{value[0]}")
-                choice = input(f"Enter your choice 1 TO 4 or press (Q to quit): ")
-                if choice.upper() == "Q":
-                    print(f"\033[33mThank you for using Calculator!!\033[m")
+                choice = input(f"Enter your choice 1 TO 4 : ")
                 if choice not in self.calculator_menu.keys():
                     print("\033[31mInvalid choice\033[0m")
                     try_again = input(f"Do you want to try again? \033[32mY\033[0m or \033[31mN\033[0m: ")
