@@ -8,12 +8,17 @@ class CalculatorApp(CalculatorMenu):
             try:
                 for key, value in self.calculator_menu.items():
                     print(f"{key}:{value[0]}")
-                choice = input("Enter your choice 1 TO 4 or press (Q to quit): ")
+                choice = input(f"Enter your choice 1 TO 4 or press (Q to quit): ")
                 if choice.upper() == "Q":
-                    break
+                    print(f"\033[33mThank you for using Calculator!!\033[m")
                 if choice not in self.calculator_menu.keys():
-                    print("\033[31mInvalid choice, please try again\033[0m")
-                    continue
+                    print("\033[31mInvalid choice\033[0m")
+                    try_again = input(f"Do you want to try again? \033[32mY\033[0m or \033[31mN\033[0m: ")
+                    if try_again.upper() == "Y":
+                        continue
+                    else:
+                        print(f"\033[33mThank you for using Calculator!!\033[m")
+                        break
                 number_1 = float(input("\033[32mEnter first number:\033[0m "))
                 number_2 = float(input("\033[32mEnter second number:\033[0m "))
                 operation_name = self.calculator_menu[choice][0]
